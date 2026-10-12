@@ -1,4 +1,43 @@
-# RecipesProject API
+# 🍲 Recipes Management API — Backend Service
+
+A scalable and modular **Node.js RESTful API** designed for managing culinary recipes. Built with **Express** and **MongoDB**, this backend service provides robust CRUD functionality, efficient schema modeling, dynamic query capabilities, and structured data persistence.
+
+🔗 **Repository:** [https://github.com/titirot/recipes-backend-service](https://github.com/titirot/recipes-backend-service)
+
+---
+
+## 🛠️ Tech Stack & Tools
+
+- **Runtime Environment:** Node.js
+- **Web Framework:** Express.js
+- **Database:** MongoDB
+- **ODM / Data Access:** Mongoose (Schema validation & data modeling)
+- **API Testing:** Postman
+- **Environment Management:** dotenv
+
+---
+
+## ✨ Key Features & Capabilities
+
+- **🍲 Recipe Management (CRUD):** Full API suite to create, read, update, and delete recipes.
+- **🔍 Advanced Querying:** Dynamic filtering, searching by ingredients or categories, and sorting.
+- **🛡️ Data Validation:** Strict Mongoose models and schema constraints ensuring clean input data.
+- **⚡ Error Handling:** Centralized Express middleware for unified error parsing and HTTP response status codes.
+- **🧱 Layered Architecture:** Modular organization separating Controllers, Services, Models, and Route definitions.
+
+---
+
+## 📁 Project Structure
+
+```text
+recipes-management-api/
+├── config/         # Database connection & env setup
+├── controllers/    # Request handlers & logic execution
+├── models/         # Mongoose schema definitions
+├── routes/         # Express API endpoint routes
+├── middleware/     # Custom error handlers & validation
+├── app.js          # Express app entry point
+└── package.json    # Project dependencies & scripts
 
 ## Roles
 - `guest` - not authenticated
@@ -25,8 +64,3 @@
 
 \* Route role allows authenticated users; controller enforces ownership.
 
-## Notes
-- Error format is normalized to: `{ "error": { "message": "..." } }`
-- Unknown routes return `404` in the same error format.
-- JWT authentication uses `Authorization: Bearer <token>`.
-- CORS is currently open to all origins.
